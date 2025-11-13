@@ -1,9 +1,10 @@
 <Window xmlns="https://github.com/avaloniaui"
+        xmlns:ScottPlot="using:ScottPlot.Avalonia"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:AvaloniaApplication2.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
         x:Class="AvaloniaApplication2.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -19,15 +20,15 @@
             <Button.ContextFlyout>
               <Flyout>这是按钮的右键菜单</Flyout>
             </Button.ContextFlyout>
-<!--          <Button.Flyout>
+          <Button.Flyout>
             <Flyout>这是按钮的弹出层</Flyout>
-          </Button.Flyout>-->
+          </Button.Flyout>
         </Button>
-        <!-- 引用资源字典中的路径数据 -->
-        <PathIcon Height="200" Width="200" 
+        <PathIcon Height="50" Width="50" 
                   Data="{StaticResource PcPathData}" 
-                  Foreground="Black"/> <!-- 设置颜色 -->
+                  Foreground="Black"/> 
       <TextBlock Margin="0 5" FontFamily="YaHei">物品数量：</TextBlock>
       <NumericUpDown Value="10" FormatString="0" Maximum="10" Minimum="0" />
+        <ScottPlot:AvaPlot Name="AvaPlot1" Width="200" Height="200" />
     </StackPanel>
 </Window>

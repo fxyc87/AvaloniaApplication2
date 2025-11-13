@@ -5,6 +5,8 @@ using Avalonia.Interactivity;
 
 using AvaloniaApplication2.ViewModels;
 
+using ScottPlot.Avalonia;
+
 namespace AvaloniaApplication2.Views
 {
     public partial class MainWindow : Window
@@ -26,7 +28,12 @@ namespace AvaloniaApplication2.Views
 
         private void MainWindow_Loaded(object? sender, RoutedEventArgs e)
         {
+            double[] dataX = { 1, 2, 3, 4, 5 };
+            double[] dataY = { 1, 4, 9, 16, 25 };
 
+            AvaPlot avaPlot1 = this.Find<AvaPlot>("AvaPlot1");
+            avaPlot1.Plot.Add.Scatter(dataX, dataY);
+            avaPlot1.Refresh();
         }
     }
 }
