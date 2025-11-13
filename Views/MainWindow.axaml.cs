@@ -2,7 +2,7 @@ using System;
 
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-
+using Avalonia.Controls.Shapes;
 using AvaloniaApplication2.ViewModels;
 
 using ScottPlot.Avalonia;
@@ -24,6 +24,8 @@ namespace AvaloniaApplication2.Views
         {
             button1.Content = $"Click Me! {Count2++}";
             text1.Text = $"{model.Greeting} {model.Count++}";
+            //panel1里动态添加一个Canvas ，Canvas 中画几根直线
+            //this.panel1.Children.Add(new Line() { Width = 100, Height = 5 });
         }
 
         private void MainWindow_Loaded(object? sender, RoutedEventArgs e)

@@ -25,13 +25,7 @@
     </PackageReference>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
     <PackageReference Include="ScottPlot.Avalonia" Version="5.1.57" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <AvaloniaResource Update="Assets\pc.path">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>pc.cs</LastGenOutput>
-    </AvaloniaResource>
+    <PackageReference Include="Svg.Controls.Avalonia" Version="11.3.6.2" />
   </ItemGroup>
 
   <ItemGroup>
